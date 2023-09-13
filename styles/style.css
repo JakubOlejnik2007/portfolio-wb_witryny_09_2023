@@ -1,0 +1,207 @@
+@keyframes handWave {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(50deg);
+    }
+    75% {
+        transform: rotate(-30deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Nunito;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card__emoji {
+    font-size: 3.5rem;
+}
+
+.card__list {
+    text-align: left;
+    margin: 40px 0;
+    font-size: 0.9rem;
+    color: #dbe2eb;
+}
+
+.card__list > li {
+    margin: 15px;
+}
+
+.card__list--green {
+    list-style-image: url("../img/small-tick-green.svg");
+}
+
+.card__list--blue {
+    list-style-image: url("../img/small-tick-blue.svg");
+}
+
+.footer {
+    background-color: #dbeaf7;
+    color: #425a70;
+    padding: 50px;
+}
+
+.footer__group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    margin: 80px;
+}
+
+.footer__heading {
+    color: #234361
+}
+
+.footer__heading, .footer__content {
+    text-align: center;
+}
+
+.footer__icon {
+    width: fit-content;
+    height: 24px;
+    display: block;
+    background-color: white;
+    padding: 12px;
+    border-radius: 50px;
+}
+
+.footer__icons {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #778ca1;
+    padding: 50px;
+}
+.header__button {
+    margin: 20px auto;
+}
+
+.header__button, .footer__button {
+    transition: ease-in 0.5s;
+    width: fit-content;
+    display: block;
+    background-color: #4da8ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.header__button:hover, .footer__button:hover {
+    transition: ease-in 0.5s;
+    background-color: #234361;
+}
+
+.header__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: auto;
+    width: 70%;
+    line-height: 2rem;
+}
+
+.header__content--special {
+    color: #4da8ff;
+    font-weight: bold;
+}
+
+.header__heading {
+    color: #234361;
+}
+
+.header__heading--special {
+    color: #1171ca;
+}
+
+.projects {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+    color: #425a70;
+    margin-bottom: 200px;
+}
+
+.projects__heading {
+    color: #234361;
+}
+
+.skills {
+    background-color: #1171ca;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.skills__group {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.skills__heading {
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.speech {
+    position: relative;
+}
+
+.speech__image {
+    border: 20px solid #f6f9fd;
+    border-radius: 60px;
+}
+
+.speech__text {
+    position: absolute;
+    top: -20px;
+    right: -185px;
+    background-color: #1171ca;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+}
+
+.speech__text::after {
+    position: absolute;
+    top: 45px;
+    left: 20px;
+    content: url("../img/speech.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.speech__text:hover > .speech__text--wave {
+    display: inline-block;
+    animation-duration: 2s;
+    animation-name: handWave;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
